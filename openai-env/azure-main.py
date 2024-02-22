@@ -37,7 +37,7 @@ message_text = [
 ]
  
 completion = client.chat.completions.create(
-    model="zchen-test-1",
+    model=os.getenv("MODEL_NAME"),
     messages=message_text,
     temperature=0.8,
     max_tokens=800,
